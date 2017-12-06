@@ -1,11 +1,12 @@
-add_lunch_combo cm_d2dcm-userdebug
-add_lunch_combo cm_sc02e-userdebug
-add_lunch_combo cm_sc03e-userdebug
-add_lunch_combo cm_sc02f-userdebug
-add_lunch_combo cm_celoxdcm-userdebug
-add_lunch_combo cm_quincydcm-userdebug
-add_lunch_combo cm_jfltedcm-userdebug
-add_lunch_combo cm_js01lte-userdebug
-add_lunch_combo cm_hltedcm-userdebug
-add_lunch_combo cm_hltekdi-userdebug
+#add_lunch_combo lineage_d2dcm-userdebug
+#add_lunch_combo lineage_sc02e-userdebug
+#add_lunch_combo lineage_sc03e-userdebug
+#add_lunch_combo lineage_sc02f-userdebug
+#add_lunch_combo lineage_celoxdcm-userdebug
+#add_lunch_combo lineage_quincydcm-userdebug
+#add_lunch_combo lineage_jfltedcm-userdebug
+#add_lunch_combo lineage_js01lte-userdebug
+#add_lunch_combo lineage_hltedcm-userdebug
+#add_lunch_combo lineage_hltekdi-userdebug
+add_lunch_combo lineage_kltedcm-userdebug
 

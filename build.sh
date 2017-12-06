@@ -40,6 +40,6 @@ echo "========================================================================="
 if [ ! "${MAKE_TARGET}" ]; then
   brunch ${PRODUCT}
 else
-  choosecombo release cm_${PRODUCT} userdebug
+  choosecombo release lineage_${PRODUCT} userdebug
   make ${MAKE_TARGET} -j$(cat /proc/cpuinfo | grep "^processor" | wc -l)  ${@:3}
 fi
