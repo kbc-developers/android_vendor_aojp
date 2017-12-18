@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export USE_CCACHE=1
+export CCACHE_DIR=~/.ccache
+
 PRODUCT=$1
 MAKE_TARGET=$2
 
