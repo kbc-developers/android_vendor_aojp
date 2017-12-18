@@ -21,5 +21,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #Input method (Japanese keyboard)
 PRODUCT_PACKAGES += \
-	Mozc
+	MozcForAndroid libmozc
 
