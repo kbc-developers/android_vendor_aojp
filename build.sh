@@ -1,7 +1,9 @@
 #!/bin/bash
 
+if [ "$TARGET_RECOVERY" != "twrp" ]; then
 export USE_CCACHE=1
 export CCACHE_DIR=~/.ccache
+fi
 
 PRODUCT=$1
 MAKE_TARGET=$2
@@ -22,10 +24,6 @@ export KBUILD_BUILD_HOST=kbc
 # import product config
 . ${PRODUCT_CONF}
 
-if [ "$TARGET_RECOVERY" == "twrp" ]; then
-    export PLATFORM_SDK_VERSION=23
-fi
-
 echo "========================================================================="
 echo " PRODUCT : ${PRODUCT}"
 echo "   LINEAGE_BUILDTYPE : ${LINEAGE_BUILDTYPE}"
@@ -43,6 +41,10 @@ echo "========================================================================="
 if [ ! "${MAKE_TARGET}" ]; then
   brunch ${PRODUCT}
 else
-  choosecombo release lineage_${PRODUCT} userdebug
-  make ${MAKE_TARGET} -j$(cat /proc/cpuinfo | grep "^processor" | wc -l)  ${@:3}
+  choosecombo release lineage_${PRODUCT} userdebug  
+  if [ "$TARGET_RECOVERY" == "twrp" ]; then
+    mka ${MAKE_TARGET} -j$(cat /proc/cpuinfo | grep "^processor" | wc -l)  ${@:3}
+  else
+    make ${MAKE_TARGET} -j$(cat /proc/cpuinfo | grep "^processor" | wc -l)  ${@:3}
+  fi
 fi
