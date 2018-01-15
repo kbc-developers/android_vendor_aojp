@@ -13,7 +13,7 @@ if [ ! -e ${PRODUCT_CONF} ]; then
 fi
 
 # common
-export CM_BUILDTYPE=AOJP
+export LINEAGE_BUILDTYPE=AOJP
 export KBUILD_BUILD_HOST=kbc
 
 # import product config
@@ -25,7 +25,7 @@ fi
 
 echo "========================================================================="
 echo " PRODUCT : ${PRODUCT}"
-echo "   CM_BUILDTYPE : ${CM_BUILDTYPE}"
+echo "   LINEAGE_BUILDTYPE : ${LINEAGE_BUILDTYPE}"
 echo "   TARGET_RECOVERY : ${TARGET_RECOVERY}"
 echo "   PRODUCT_PREBUILT_WEBVIEWCHROMIUM : ${PRODUCT_PREBUILT_WEBVIEWCHROMIUM}"
 if [ ! "${MAKE_TARGET}" ]; then
@@ -40,6 +40,6 @@ echo "========================================================================="
 if [ ! "${MAKE_TARGET}" ]; then
   brunch ${PRODUCT}
 else
-  choosecombo release cm_${PRODUCT} userdebug
+  choosecombo release lineage_${PRODUCT} userdebug
   make ${MAKE_TARGET} -j$(cat /proc/cpuinfo | grep "^processor" | wc -l)  ${@:3}
 fi
