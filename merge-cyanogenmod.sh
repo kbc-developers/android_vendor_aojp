@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ANDROID_HOME=$PWD
-REVISION=lineage-15.0
+REVISION=lineage-15.1
 
 func_fetch() {
     REMOTE=$1
@@ -43,7 +43,7 @@ func_fetch() {
 }
 
 # platform
-func_fetch LineageOS android android
+func_fetch LineageOS android android staging/lineage-15.1 staging/lineage-15.1
 #func_fetch CyanogenMod android_build build
 #func_fetch CyanogenMod android_bionic bionic
 #func_fetch CyanogenMod android_frameworks_av frameworks/av
@@ -51,20 +51,21 @@ func_fetch LineageOS android android
 #func_fetch CyanogenMod android_packages_apps_Settings packages/apps/Settings
 #func_fetch CyanogenMod android_frameworks_native frameworks/native
 #func_fetch CyanogenMod android_system_core system/core
-#func_fetch CyanogenMod android_packages_apps_Nfc packages/apps/Nfc
+#func_fetch LineageOS android_packages_apps_Nfc packages/apps/Nfc
 
 # vendor
-#func_fetch CyanogenMod android_vendor_cm vendor/cm
+func_fetch LineageOS android_vendor_lineage vendor/lineage lineage-15.1 staging/lineage-15.1
+
 
 # recovery
 #func_fetch CyanogenMod android_bootable_recovery bootable/recovery-cm
-#func_fetch omnirom android_bootable_recovery bootable/recovery-twrp android-8.0 android-8.0
+func_fetch omnirom android_bootable_recovery bootable/recovery-twrp android-8.1 android-8.1
 
 #---------------------------------------
 # Samsung
 #---------------------------------------
 #hardware 
-func_fetch LineageOS android_hardware_samsung hardware/samsung
+#func_fetch LineageOS android_hardware_samsung hardware/samsung
 
 # device
 #func_fetch LineageOS android_device_samsung_qcom-common device/samsung/qcom-common
@@ -81,14 +82,14 @@ func_fetch LineageOS android_hardware_samsung hardware/samsung
 #func_fetch CyanogenMod android_device_samsung_d2att device/samsung/d2dcm
 #func_fetch CyanogenMod android_device_samsung_jf-common device/samsung/jf-common
 #func_fetch CyanogenMod android_device_samsung_jflteatt device/samsung/jfltedcm
-#func_fetch CyanogenMod android_device_samsung_hlte device/samsung/hltedcm
+#func_fetch CyanogenMod android_device_samsung_hlte device/samsung/hltedcm 
 #func_fetch CyanogenMod android_device_samsung_hlte-common device/samsung/hlte-common
 #func_fetch CyanogenMod android_device_samsung_smdk4412-common device/samsung/smdk4412-common
 #func_fetch CyanogenMod android_device_samsung_smdk4412-qcom-common device/samsung/smdk4412-qcom-common
 #func_fetch CyanogenMod android_device_samsung_i9305 device/samsung/sc03e
 #func_fetch CyanogenMod android_device_samsung_t0lte device/samsung/sc02e
-#func_fetch LineageOS android_device_samsung_klte-common device/samsung/klte-common
-#func_fetch LineageOS android_device_samsung_klte device/samsung/kltedcm
+func_fetch LineageOS android_device_samsung_klte-common device/samsung/klte-common
+func_fetch LineageOS android_device_samsung_klte device/samsung/kltedcm
 
 # kernel
 #func_fetch CyanogenMod android_kernel_samsung_msm8660-common kernel/samsung/msm8660-dcm
@@ -96,10 +97,10 @@ func_fetch LineageOS android_hardware_samsung hardware/samsung
 #func_fetch CyanogenMod android_kernel_samsung_smdk4412 kernel/samsung/exynos4412dcm
 #func_fetch CyanogenMod android_kernel_samsung_jf kernel/samsung/jfdcm
 #func_fetch CyanogenMod android_kernel_samsung_hlte kernel/samsung/hlte
-#func_fetch LineageOS android_kernel_samsung_msm8974 kernel/samsung/msm8974
+func_fetch LineageOS android_kernel_samsung_msm8974 kernel/samsung/msm8974
 
 # vendor
-#func_fetch TheMuppets proprietary_vendor_samsung vendor/samsung
+func_fetch TheMuppets proprietary_vendor_samsung vendor/samsung
 
 #---------------------------------------
 # LGE
