@@ -13,7 +13,7 @@ if [ ! -e ${PRODUCT_CONF} ]; then
 fi
 
 # common
-export LINEAGE_BUILDTYPE=AOJP
+export CM_BUILDTYPE=AOJP
 export KBUILD_BUILD_HOST=kbc
 
 # import product config
