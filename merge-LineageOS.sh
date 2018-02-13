@@ -43,7 +43,7 @@ func_fetch() {
 }
 
 # platform
-func_fetch LineageOS android android staging/lineage-15.1 staging/lineage-15.1
+func_fetch LineageOS android android
 #func_fetch CyanogenMod android_build build
 #func_fetch CyanogenMod android_bionic bionic
 #func_fetch CyanogenMod android_frameworks_av frameworks/av
@@ -54,7 +54,7 @@ func_fetch LineageOS android android staging/lineage-15.1 staging/lineage-15.1
 #func_fetch LineageOS android_packages_apps_Nfc packages/apps/Nfc
 
 # vendor
-func_fetch LineageOS android_vendor_lineage vendor/lineage lineage-15.1 staging/lineage-15.1
+func_fetch LineageOS android_vendor_lineage vendor/lineage
 
 
 # recovery
@@ -91,6 +91,8 @@ func_fetch omnirom android_bootable_recovery bootable/recovery-twrp android-8.1 
 func_fetch LineageOS android_device_samsung_klte-common device/samsung/klte-common
 func_fetch LineageOS android_device_samsung_klte device/samsung/kltedcm
 
+func_fetch LineageOS android_device_samsung_hlte device/samsung/hltedcm 
+func_fetch LineageOS android_device_samsung_hlte-common device/samsung/hlte-common
 # kernel
 #func_fetch CyanogenMod android_kernel_samsung_msm8660-common kernel/samsung/msm8660-dcm
 #func_fetch CyanogenMod android_kernel_samsung_d2 kernel/samsung/d2dcm
