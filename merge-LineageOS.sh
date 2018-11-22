@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ANDROID_HOME=$PWD
-REVISION=lineage-15.1
+REVISION=lineage-16.0
 
 func_fetch() {
     REMOTE=$1
