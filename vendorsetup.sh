@@ -9,4 +9,4 @@
 #add_lunch_combo lineage_hltedcm-userdebug
 #add_lunch_combo lineage_hltekdi-userdebug
 add_lunch_combo lineage_kltedcm-userdebug
-
+add_lunch_combo lineage_kltedcmactive-userdebug
